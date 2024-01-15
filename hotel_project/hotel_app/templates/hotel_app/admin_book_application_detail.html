@@ -1,0 +1,11 @@
+<h1>Book Application Detail</h1>
+<p>Room: {{ application.room.description }}</p>
+<p>Client: {{ application.client.full_name }}</p>
+<p>Check-in Date: {{ application.check_in_date }}</p>
+<p>Check-out Date: {{ application.check_out_date }}</p>
+<p>Additional Services: {{ application.additional_services }}</p>
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" name="action" value="approve">
+    <input type="submit" name="action" value="reject">
+</form>

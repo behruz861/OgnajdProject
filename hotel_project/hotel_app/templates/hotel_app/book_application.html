@@ -1,0 +1,15 @@
+<h1>Book Room - {{ room.description }}</h1>
+<form method="POST">
+    {% csrf_token %}
+    <label for="full_name">Full Name:</label>
+    <input type="text" name="full_name" id="full_name" required><br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required><br>
+    <label for="check_in_date">Check-in Date:</label>
+    <input type="date" name="check_in_date" id="check_in_date" required><br>
+    <label for="check_out_date">Check-out Date</label>
+    <input type="date" name="check_out_date" id="check_out_date" required><br>
+    <label for="additional_services">Additional Services:</label>
+    <textarea name="additional_services" id="additional_services"></textarea><br>
+    <input type="submit" value="submit">
+</form>

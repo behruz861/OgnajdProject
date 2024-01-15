@@ -1,0 +1,4 @@
+<h1>Book Applications</h1>
+{% for application in applications %}
+    <p><a href="{% url 'admin_book_application_detail' slug_book_application=application.slug %}">{{ application.room.description }} - {{ application.client.full_name }}</a></p>
+{% endfor %}

@@ -1,0 +1,5 @@
+<h1>Room Detail</h1>
+<p>{{ room.description }}</p>
+<p>Category: {{ room.get_category_display }}</p>
+<p><img src="{{ room.image.url }}" alt="{{ room.description }}"></p>
+<p><a href="{% url 'book_application' slug_room=room.slug %}">Book Now</a></p>

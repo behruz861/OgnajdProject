@@ -1,0 +1,15 @@
+<h1>Add Room</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="category">Category:</label>
+    <select name="category" id="category" required>
+        <option value="cheap">Cheap</option>
+        <option value="comfortable">Comfortable</option>
+        <option value="vip">V.I.P</option>
+    </select><br>
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" required></textarea><br>
+    <label for="image">Image:</label>
+    <input type="file" name="image" id="image" accept="image/*"><br>
+    <input type="submit" value="submit">
+</form>
